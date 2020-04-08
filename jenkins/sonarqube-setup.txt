@@ -16,7 +16,7 @@ Install SonarQube ( container or download zip )
 		cd /tmp ; mv sonarqube-6.7.6 /opt
 		groupadd devops
 		useradd devops -m -d /home/devops -s /bin/bash -g devops
-		passwd devops ( enter passwd )
+		passwd devops --> Press Enter and ( enter passwd )
 		cd /opt ; chown -R devops:devops sonarqube-6.7.6 ; chmod -R 755 sonarqube-6.7.6
 		su - devops
 		cd /opt/sonarqube-6.7.6/bin/linux-x86-64/ ; ./sonar.sh start
@@ -73,3 +73,13 @@ mvn sonar:sonar \
   -Dsonar.projectKey=sampleapp \
   -Dsonar.host.url=http://18.218.176.225:9000 \
   -Dsonar.login=admin
+
+Add missing properties in sonar-runner.properties, if there is an error 'sonar.projectKey'
+
+	sonar.projectKey=sampleapp
+	sonar.ProjectName=sampleapp
+	sonar.sources=src/main/java/
+	sonar.java.binaries=target/classes/
+	sonar.language=java
+	sonar.java.source=1.8
+	

@@ -97,3 +97,8 @@ file/directory permissions
 			   chmod 400 firl/dir -- r for root, for owner/other no permissions
 			   
 		like wise we can update the permissions as needed
+
+Debug command:
+
+	tail -n 11 /var/log/mail.log  --> show only 11 lines of this log file.
+
