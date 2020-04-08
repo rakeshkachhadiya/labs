@@ -33,6 +33,9 @@ Docker Volumes
 	docker volume create # create a volume 
 	docker inspect volume # inspect the volume
 
+Docker container memory utilization
+        docker stats # container memory utilzation from your machine.
+
 Docker COMPOSE:
 
   case 1: deploy multiple containers from a single image
