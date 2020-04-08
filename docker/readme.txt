@@ -36,6 +36,9 @@ Docker Volumes
 Docker container memory utilization
         docker stats # container memory utilzation from your machine.
 
+Docker content inside
+        docker exec -it 46a433871d25 /bin/bash  # watch content inside docker image. 
+
 Docker COMPOSE:
 
   case 1: deploy multiple containers from a single image
