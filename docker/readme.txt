@@ -36,8 +36,15 @@ Docker Volumes
 Docker container memory utilization
         docker stats # container memory utilzation from your machine.
 
-Docker content inside
-        docker exec -it 46a433871d25 /bin/bash  # watch content inside docker image. 
+Docker enter into running container
+        docker exec 7d9b2a2f19bc touch /tmp/ravi.txt # Run command from ourside
+        docker exec -it 46a433871d25 /bin/bash  # intract with running container
+
+Docker running mode
+        docker run -d image # production ready image without publishing port
+	docker run -d -P image # production ready image with publishing port
+	docker run -it image # run interactive mode and run some commands directly
+ 	
 
 Docker COMPOSE:
 
