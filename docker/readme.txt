@@ -44,7 +44,10 @@ Docker running mode
         docker run -d image # production ready image without publishing port
 	docker run -d -P image # production ready image with publishing port
 	docker run -it image # run interactive mode and run some commands directly
- 	
+ 
+Docker log
+        docker logs id # last logs
+	docker logs -f id # see the live log data 
 
 Docker COMPOSE:
 
