@@ -12,7 +12,8 @@ Docker Containers
 	docker stop|start|restart   # stop/start/restart a container 
 	docker rm / docker rm -f    # remove the containers from the server
 	docker rm -f `docker ps -aq` # remove running + exited container in one shot
-	docker exec    # get inside a running container 
+	docker exec    # get inside a running container
+	docker image prune # remove all unused images
 
 Docker Images 
 	docker images  # list images in local
