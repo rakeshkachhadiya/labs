@@ -51,6 +51,9 @@ Docker log
         docker logs id # last logs
 	docker logs -f id # see the live log data 
 
+Docker complete snapshot
+        docker system df # complete shapshot of images, containers, volumes and cache
+
 Docker COMPOSE:
 
   case 1: deploy multiple containers from a single image
