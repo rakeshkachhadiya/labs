@@ -15,6 +15,7 @@ Docker Containers
 	docker exec    # get inside a running container
 	docker image prune # remove all unused images
 	docker attach  # attach to the runnng container
+	docker cp # copy files/folder between a running container and file system
 
 Docker Images 
 	docker images  # list images in local
