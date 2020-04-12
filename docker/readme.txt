@@ -14,6 +14,7 @@ Docker Containers
 	docker rm -f `docker ps -aq` # remove running + exited container in one shot
 	docker exec    # get inside a running container
 	docker image prune # remove all unused images
+	docker attach  # attach to the runnng container
 
 Docker Images 
 	docker images  # list images in local
