@@ -8,7 +8,7 @@ Docker Containers
 	docker ps      # list the running containers 
 	docker ps -a   # list running + exited containers
 	docker ps -aq  # container ids only
-	docker inspect # inspect a container
+	docker inspect # inspect a container's config, IP address
 	docker stop|start|restart   # stop/start/restart a container 
 	docker rm / docker rm -f    # remove the containers from the server
 	docker rm -f `docker ps -aq` # remove running + exited container in one shot
@@ -21,7 +21,7 @@ Docker Images
 	docker commit  ( manual )  # create image from container changes 
 	docker build ( automated ) # create image using a dockerfile
 	docker history # view the layers of an image
-	docker inspect # inspect an image
+	docker inspect # inspect an image's config, IP address
 	docker rmi     # remove image from local
 
 image repository 
