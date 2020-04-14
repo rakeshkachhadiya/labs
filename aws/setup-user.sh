@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# > sudo su # Run as root user 
+# > chmod 755 setup-user.sh # Give execution permission to file
+
 now=`date +%d%b%Y-%H%M`
 
 exp()
