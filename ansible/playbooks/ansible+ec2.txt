@@ -6,9 +6,32 @@ pip install boto         #
 
 aws --version
 
+aws configure            # Add access key Id and key as well default region to 'ap-south-1' 
+
+aws ec2 describe-instances --output table
+
 Error:
 
 Incase if there is 'locale.Error: unsupported locale setting' Error:
   >> export LC_ALL="en_US.UTF-8"
   >> export LC_CTYPE="en_US.UTF-8"
   >> sudo dpkg-reconfigure locales
+ 
+ Example:-
+ - name: Create EC2 Instance
+  hosts: localhost
+  tasks:
+    - ec2:
+        key_name: demo-key
+        instance_type: t2.micro
+        image: ami-08cec7c429219e339
+        wait: yes
+        group: launch-wizard-2
+        count: 2
+        vpc_subnet_id: subnet-6e5e7414
+        assign_public_ip: yes
+        region: us-east-2
+      register: out
+
+    - debug:
+        msg: "{{out}}"
