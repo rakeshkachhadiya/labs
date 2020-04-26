@@ -45,7 +45,8 @@ copy/rename/move operations
 	mv one.txt /tmp --- moves to one.txt to /tmp
 	mv testdir newdir -- renames testdir to newdir in crrent path 
 	mv newdir /tmp --- moves newdir to /tmp path
-
+        
+	scp agent.jar devops@35.226.57.68:/home/devops # copy local agent.jar file to remote machine at given place 
 
 file/directory permissions 
 
