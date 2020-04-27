@@ -1,3 +1,11 @@
+Basic Ansible Installations:
+
+    - Install ansibles
+    - copy 'hosts' and 'ansible.cfg' to local machine
+    - add romote host to the 'hosts' file. example: '35.226.57.68 ansible_ssh_user=XXXX ansible_ssh_pass=XXXX'
+    - give host file path to the in 'ansible.cfg'
+    - ping for test 'ansible all -m ping -u'
+
 Things to know before working with ansible
 	
 	1) ansible is agentless ( means, we do not need to run any agent on remote servers for communication )
