@@ -1,0 +1,18 @@
+- name: Create EC2 Instance
+  hosts: localhost
+  tasks:
+    - ec2:
+        key_name: demo-key
+        instance_type: t2.micro
+        image: ami-08cec7c429219e339
+        wait: yes
+        group: launch-wizard-2
+        count: 3
+        vpc_subnet_id: subnet-6e5e7414
+        assign_public_ip: yes
+        region: us-east-2
+      register: out
+   
+    - debug:
+        msg: "{{out}}"
+

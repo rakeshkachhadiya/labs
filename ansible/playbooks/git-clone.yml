@@ -1,0 +1,10 @@
+- hosts: aws
+  become: yes
+  tasks:
+   - name: Install Git
+     apt: name=git state=present
+   - name: git clone
+     git:
+      repo: 'https://github.com/rakeshkachhadiya/labs.git' 
+      dest: /home/labs
+
