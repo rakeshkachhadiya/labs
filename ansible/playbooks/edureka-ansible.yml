@@ -1,0 +1,71 @@
+---
+- hosts: all 
+  become: true
+  tasks:
+    - name: Install Git
+      apt: name=git state=present
+      register: git_out
+
+    - debug:
+        msg: "{{git_out}}"
+
+    - name: updating cache
+      apt: update_cache=true
+      register: cache_out
+
+    - debug:
+        msg: "{{cache_out}}"
+
+    - name: Install Jdk
+      apt: name=default-jdk state=present
+      register: java_out
+    
+    - debug:
+        msg: "{{java_out}}"
+
+    - name: Java version
+      shell: java --version
+      register: java_version
+
+    - debug: 
+        msg: "{{java_version}}" 
+    
+    - name: Copy chromedrive to remote
+      copy:
+       src: /home/devops/driver
+       dest: /home/devops/
+
+    - name: Install chromium browser
+      apt:
+        name: chromium-browser
+        state: present
+      register: chromium_browser_out
+
+    - debug:
+        msg: "{{ chromium_browser_out}}"
+
+    - name: Install chromium driver
+      apt:
+        name: chromium-chromedriver
+        state: present
+      register: chromium_chromedriver_out
+
+    - debug:
+        msg: "{{ chromium_chromedriver_out }}"
+
+    - name: Copy agent.jar
+      copy:
+        src: /home/devops/tmp/agent.jar
+        dest: /home/devops
+
+    - shell: ls -l /home/devops
+      register: out
+
+    - debug:
+        msg: "{{out.stdout_lines}}"    
+
+    - name: Run update
+      apt:
+        update_cache: yes     
+
+    
