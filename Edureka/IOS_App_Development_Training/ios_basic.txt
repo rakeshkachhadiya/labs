@@ -1,0 +1,5 @@
+      # App states
+
+      Cold Start - App starting from scratch
+      Hot Start - App started(Sometime Runs in Background) and avoid object initialization, layout inflamation during forgroud.
+      Warm Start - User backs out of your app, but then re-launches it, Recreate activities from scratch, sometime saves instance state
