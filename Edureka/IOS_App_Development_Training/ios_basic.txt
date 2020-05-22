@@ -1,5 +1,35 @@
-      # App states
+Terminology:
+===========
 
-      Cold Start - App starting from scratch
-      Hot Start - App started(Sometime Runs in Background) and avoid object initialization, layout inflamation during forgroud.
-      Warm Start - User backs out of your app, but then re-launches it, Recreate activities from scratch, sometime saves instance state
+App states:
+
+Cold Start - App starting from scratch
+Hot Start - App started(Sometime Runs in Background) and avoid object initialization, layout inflamation during forgroud.
+Warm Start - User backs out of your app, but then re-launches it, Recreate activities from scratch, sometime saves instance state
+      
+Simulator Commands:
+========
+    
+ xcrun simctl  --  Simulator control command to create, delete and booting simulator
+ xcrun simctl list  --  Disply list of all simulator
+ xcrun simctl create My-iphone7  -- Create new iphone7 simulator.
+ 
+ xcrun simctl install booted ../DerivedData/CLI-dxasphjukowuptcqxzbmyaqgpbqp/Build/Products/Debug-iphoneos/MyIos.app -- Deploy MyIos.app on simulator.  
+ 
+ xcrun simctl uninstall booted test.MyIos -- Unistall MyIos from Simulator
+ xcrun simctl erase all  -- Erase all simulator
+ 
+Build Commands:
+========
+ 
+ xcodebuild build build -scheme “MyIos” CODE_SIGN_IDENTITY=”” CODE_SIGNING_REQUIRED=NO -- Set no code signning config.
+ 
+App Commands:
+========
+ 
+ ../DerivedData/CLI-dxasphjukowuptcqxzbmyaqgpbqp/Build/Products/Debug-iphoneos/CLI.app -   Location of CLI.app
+ 
+ 
+ 
+ 
+      
