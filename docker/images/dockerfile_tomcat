@@ -1,11 +1,17 @@
-FROM ubuntu
+FROM ubuntu:18.04
 
 RUN apt-get -y update 
 RUN apt-get -y install openjdk-8-jdk wget
 RUN mkdir /usr/local/tomcat
+<<<<<<< HEAD
 RUN wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.53/bin/apache-tomcat-8.5.53.tar.gz -O /tmp/tomcat.tar.gz
 RUN cd /tmp && tar xvfz tomcat.tar.gz
 RUN cp -Rv /tmp/tomcat-8.5.53/* /usr/local/tomcat/
+=======
+RUN wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.54/bin/apache-tomcat-8.5.54.tar.gz -O /tmp/tomcat.tar.gz
+RUN cd /tmp&& tar xvfz tomcat.tar.gz
+RUN cp -Rv /tmp/apache-tomcat-8.5.54/* /usr/local/tomcat/
+>>>>>>> 8e2f5dc2d65c807897984bf7af063a1b60328b4b
 
 COPY sampleapp.war /usr/local/tomcat/webapps/
 
