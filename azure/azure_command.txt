@@ -1,0 +1,9 @@
+  
+Connect to server:
+===========
+
+az login # Login with Azure server
+az aks get-credentials --resource-group XYZ --name XYZ --overwrite-existing --subscription XYZ  # get azure credentials
+
+stern -n NAME_SPACE POD_NAME # retrieve pod logs 
+
