@@ -1,9 +1,27 @@
   
 Connect to server:
-===========
+=================
 
 az login # Login with Azure server
 az aks get-credentials --resource-group XYZ --name XYZ --overwrite-existing --subscription XYZ  # get azure credentials
 
-stern -n NAME_SPACE POD_NAME # retrieve pod logs 
 
+Kubernetes Pods:
+==================
+
+kubectl get namespace # get all kubernetes namespaces
+kubectl get pods --namespace NAME_SPACE # returns all pods list belongs to that namespace.
+kubectl -n NAME_SPACE describe pod POD_NAME
+
+
+
+Kubernetes Secrets:
+==================
+
+kubectl get secrets # get all secrets belongs to clustor
+kubectl -n NAME_SPACE describe secret SECRET_NAME # get detail information for thet secret
+
+
+Kubernetes Logs:
+==================
+stern -n NAME_SPACE POD_NAME # retrieve pod logs
