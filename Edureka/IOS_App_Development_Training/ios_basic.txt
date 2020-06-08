@@ -10,7 +10,7 @@ Warm Start - User backs out of your app, but then re-launches it, Recreate activ
 
 
 Simulator Commands:
-========
+==================
     
  xcrun simctl  --  Simulator control command to create, delete and booting simulator
  xcrun simctl list  --  Disply list of all simulator
@@ -24,17 +24,26 @@ Simulator Commands:
  
   
 Build Commands:
-========
+==============
  
  xcodebuild build build -scheme “MyIos” CODE_SIGN_IDENTITY=”” CODE_SIGNING_REQUIRED=NO -- Set no code signning config.
 
 
 
 App Commands:
-========
+=============
  
  ../DerivedData/CLI-dxasphjukowuptcqxzbmyaqgpbqp/Build/Products/Debug-iphoneos/CLI.app -   Location of CLI.app
  
+ 
+ 
+ 
+ 
+ Pods Commands:
+ ==============
+ 
+ pod install --repo-update # Update podfile.lock file with new changes in podFile
+ pod install -- Install new pods or its like mvn build
  
  
  
