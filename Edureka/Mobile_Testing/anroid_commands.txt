@@ -1,0 +1,12 @@
+Adb Commands:
+=============
+adb devices -- Returns list of installed emulator devices
+adb install xyz.apk -- Install give apk directly on emulator
+adb reboot -- Reboot emulator
+
+
+adb shell -- for app package and activity monitoring
+adb shell dumpsys battery -- All possible battery statistic
+adb shell dumpsys wifi -- All Wifi information
+
+adb shell dumpsys window | grep -E 'mCurrentFocus' -- Returns app package and activity page
