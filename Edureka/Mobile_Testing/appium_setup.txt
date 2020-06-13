@@ -32,3 +32,13 @@ export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-
 Emulator Ios Setup:
 =====================
 
+Capabilities for UIAnimator
+
+{ "platformName": "iOS",
+  "platformVersion": "12.2",
+  "deviceName": "iPhone 8",
+  "automationName": "XCUITest",
+  "app": "/$HOME/DirivedData/XYZ/SimpleTableView.app"
+}
+
+
