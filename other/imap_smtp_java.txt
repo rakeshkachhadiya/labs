@@ -1,0 +1,6 @@
+IMAP Setting
+============
+
+https://www.google.com/accounts/DisplayUnlockCaptcha -- Disable capcha and login from another device
+"Less secure apps" section in My Account -- Go to Security section and turn on less secure apps
+ Settings > Forwarding & POP/IMAP -- Turn on IMAP from settings.
