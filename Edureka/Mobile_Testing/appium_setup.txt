@@ -42,3 +42,15 @@ Capabilities for UIAnimator
 }
 
 
+
+
+
+
+Elements Command:
+======================
+
+"//tagname[@attributename='value']"
+driver.findElementByXPath("//XCUIElementTypeTextField[@name='login_textfield']")
+
+
+
